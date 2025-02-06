@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Coffee</title>
+    <link rel="stylesheet" href="{% static 'coffee/css/style.css' %}">
+</head>
+<body>
+<header class="hero">
+    <nav class="navbar">
+        <div class="logo">
+                <a href="#">
+                    <img src="{% static 'coffee/img/logo.png' %}" alt="Logo">
+                </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#productos">Productos</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+    <div class="hero-content">
+        <h1>SWEET COFFEE</h1>
+        <p>El dulce aroma a café te va a encantar, ven y pruébalo YA</p>
+        <a href="#" class="btn-primary">INFORMACIÓN</a>
+    </div>
+</header>
+
+
+<section class="coffee-types" id="productos">
+    <h2>NUESTROS DIFERENTES</h2>
+    <h2>TIPOS DE CAFÉ</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae.</p>
+    <div class="coffee-grid">
+
+        <div class="coffee-item">
+            <img src="{% static 'coffee/img/espresso.jpg' %}" alt="Espresso">
+            <h3>Espresso</h3>
+            <p>Un café fuerte y aromático perfecto para comenzar el día.</p>
+        </div>
+
+        <div class="coffee-item">
+            <img src="{% static 'coffee/img/cappuccino.jpg' %}" alt="Cappuccino">
+            <h3>Cappuccino</h3>
+            <p>Una mezcla perfecta de espresso, leche y espuma cremosa.</p>
+        </div>
+
+        <div class="coffee-item">
+            <img src="{% static 'coffee/img/latte.jpg' %}" alt="Latte">
+            <h3>Latte</h3>
+            <p>Un café suave con un toque de leche para endulzar tu día.</p>
+        </div>
+    </div>
+</section>
+
+
+<section class="info-section" id="servicios">
+    <div class="info-container">
+        <div class="info-text">
+            <h2>Descubre el mundo del café</h2>
+            <p>Explora nuestros orígenes, variedades y recetas exclusivas que cautivarán tu paladar.</p>
+            <a href="#" class="btn-primary">Información</a>
+        </div>
+        <div class="info-image">
+            <img src="{% static 'coffee/img/coffee-info.jpg' %}" alt="Café">
+        </div>
+    </div>
+</section>
+
+
+<section class="blog-section">
+    <div class="blog-container">
+        <div class="blog-header">
+            <h2>BLOG</h2>
+            <p>Explora las historias detrás de nuestras tazas de café.</p>
+        </div>
+        <div class="blog-posts">
+            <div class="blog-post">
+                <img src="{% static 'coffee/img/blog1.jpg' %}" alt="Blog 1">
+                <h3>Blog 1</h3>
+                <p>Descubre cómo seleccionamos los mejores granos de café para ti.</p>
+            </div>
+            <div class="blog-post">
+                <img src="{% static 'coffee/img/blog2.jpg' %}" alt="Blog 2">
+                <h3>Blog 2</h3>
+                <p>Aprende sobre los métodos de preparación que usamos.</p>
+            </div>
+            <div class="blog-post">
+                <img src="{% static 'coffee/img/blog3.jpg' %}" alt="Blog 3">
+                <h3>Blog 3</h3>
+                <p>Conoce más sobre la historia del café y su impacto.</p>
+            </div>
+        </div>
+        <div class="blog-footer">
+            <a href="#" class="btn-primary">Más información</a>
+        </div>
+    </div>
+</section>
+
+
+<footer class="footer" id="contacto">
+    <div class="footer-container">
+        <div class="footer-column">
+            <h3>Titulo</h3>
+            <ul>
+                <li><a href="#">Enlace 1</a></li>
+                <li><a href="#">Enlace 2</a></li>
+                <li><a href="#">Enlace 3</a></li>
+                <li><a href="#">Enlace 4</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h3>Titulo</h3>
+            <ul>
+                <li><a href="#">Enlace 1</a></li>
+                <li><a href="#">Enlace 2</a></li>
+                <li><a href="#">Enlace 3</a></li>
+                <li><a href="#">Enlace 4</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h3>Titulo</h3>
+            <ul>
+                <li><a href="#">Enlace 1</a></li>
+                <li><a href="#">Enlace 2</a></li>
+                <li><a href="#">Enlace 3</a></li>
+                <li><a href="#">Enlace 4</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h3>Titulo</h3>
+            <ul>
+                <li><a href="#">Enlace 1</a></li>
+                <li><a href="#">Enlace 2</a></li>
+                <li><a href="#">Enlace 3</a></li>
+                <li><a href="#">Enlace 4</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+
+    <script>
+        window.addEventListener('scroll', () => {
+            const hero = document.querySelector('.hero');
+            const scrollPos = window.scrollY;
+            const maxScroll = 200; 
+            const offset = Math.min(scrollPos / maxScroll, 1);
+            hero.style.backgroundPosition = `center ${offset * 50}%`;
+        });
+    </script>
+
+</body>
+</html>
