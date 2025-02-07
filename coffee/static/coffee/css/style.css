@@ -310,7 +310,6 @@ footer {
     font-family: Arial, sans-serif;
 }
 
-/* Línea inferior con derechos reservados */
 .footer-bottom {
     display: flex;
     justify-content: space-between;
@@ -338,7 +337,7 @@ footer {
 
 
 
-/* Footer general */
+
 .footer {
     background-color: #222;
     color: #fff;
@@ -346,23 +345,22 @@ footer {
     font-family: Arial, sans-serif;
 }
 
-/* Contenido del footer */
+
 .footer-content {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Cuatro columnas iguales */
+    grid-template-columns: repeat(4, 1fr); 
     gap: 20px;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-/* Secciones del footer */
+
 .footer-section {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-/* Logo y texto */
 .footer-logo {
     border-radius: 100%;
     align-items: center;
@@ -376,14 +374,13 @@ footer {
     color: #ccc;
 }
 
-/* Títulos */
 .footer-section h3 {
     font-size: 1.2em;
     margin-bottom: 10px;
     color: #dbbd93;
 }
 
-/* Listas */
+
 .footer-section ul {
     list-style: none;
     padding: 0;
@@ -393,15 +390,15 @@ footer {
 .footer-section ul li {
     display: flex;
     align-items: center;
-    gap: 8px; /* Espaciado entre el icono y el texto */
+    gap: 8px;
     font-size: 0.9em;
     line-height: 1.8;
     color: #ccc;
 }
 
 .footer-section ul li i {
-    color: #ddbf95; /* Color dorado para los iconos */
-    font-size: 1.2em; /* Tamaño del icono */
+    color: #ddbf95; 
+    font-size: 1.2em; 
 }
 
 
@@ -419,7 +416,6 @@ footer {
     color: #fff;
 }
 
-/* Iconos sociales */
 .social-icons {
     display: flex;
     gap: 10px;
@@ -436,12 +432,12 @@ footer {
     color: #fff;
 }
 
-/* Footer inferior */
+
 .footer-bottom {
-    text-align: center; /* Centra el texto horizontalmente */
-    font-size: 0.8em; /* Tamaño del texto */
-    color: #ccc; /* Color del texto */
-    padding: 10px 0; /* Espaciado arriba y abajo */
+    text-align: center; 
+    font-size: 0.8em; 
+    color: #ccc; 
+    padding: 10px 0; 
 }
 
 
@@ -454,11 +450,11 @@ footer {
     align-items: flex-start;
     gap: 50px;
     padding: 50px;
-    background-color: #222; /* Fondo oscuro */
-    color: #ccc; /* Texto claro */
-    width: 100%; /* Ocupa todo el ancho */
+    background-color: #222;
+    color: #ccc; 
+    width: 100%; 
     height: 100%;
-    box-sizing: border-box; /* Incluye padding y border en el ancho total */
+    box-sizing: border-box; 
 }
 
 .contact-info {
@@ -467,7 +463,7 @@ footer {
 
 .contact-intro {
     font-size: 0.9em;
-    color: #e0a24c; /* Color dorado */
+    color: #e0a24c; 
     text-transform: uppercase;
     margin-bottom: 10px;
     border-left: 3px solid #e0a24c;
@@ -487,8 +483,8 @@ footer {
 
 .contact-details {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
-    gap: 20px; /* Espaciado entre columnas y filas */
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px; 
 }
 
 .detail-item {
@@ -513,7 +509,7 @@ footer {
 }
 
 .divider {
-    width: 100%; /* Línea hasta la mitad */
+    width: 100%; 
     margin: 0 auto;
     border: 1px solid #444;
 }
@@ -540,7 +536,7 @@ footer {
 }
 
 .contact-form {
-    width: 100%; /* Formulario ocupa la mitad */
+    width: 100%; 
     background-color: #333;
     padding: 30px;
     border-radius: 8px;
@@ -585,12 +581,6 @@ footer {
 
 
 
-
-
-
-
-
-/* General settings */
 body {
     color: #fff;
     font-family: Arial, sans-serif;
@@ -599,8 +589,6 @@ body {
 
 
 
-
-/* Features Section */
 .features-section {
     background-color: #e2ac6ff6;
     padding: 60px;
@@ -624,8 +612,6 @@ body {
 
 
 
-/* Sección Menú */
-/* Contenedor general del menú */
 
 .menu-section{
     background-color: #222;
@@ -633,16 +619,16 @@ body {
 
 .menu-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
-    grid-gap: 20px; /* Espaciado entre elementos */
-    width: 70%; /* Ocupa el 50% del ancho de la pantalla */
-    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    grid-template-columns: repeat(2, 1fr); 
+    grid-gap: 20px; 
+    width: 70%;
+    margin: 0 auto; 
     padding: 20px;
     background-color: #222;
     border-radius: 10px;
 }
 
-/* Cada ítem del menú */
+
 .menu-item {
     display: flex;
     align-items: center;
@@ -657,14 +643,14 @@ body {
     transform: scale(1.05);
 }
 
-/* Imagen dentro de los ítems */
+
 .menu-item img {
     width: 100px;
     height: auto;
     border-radius: 8px;
 }
 
-/* Contenido del ítem */
+
 .menu-content h4 {
     display: flex;
     justify-content: space-between;
@@ -684,7 +670,7 @@ body {
     font-size: 0.9em;
 }
 
-/* Estilo del encabezado del menú */
+
 .menu-header {
     text-align: center;
     margin-bottom: 30px;
@@ -712,7 +698,6 @@ body {
 
 
 
-/* About Us Section */
 .about-us-section {
     background-color: #222;
     padding: 50px 20px;
@@ -787,7 +772,7 @@ body {
 
 
 
-/* Newsletter Section */
+
 .newsletter-section {
     background-color: #333;
     padding: 50px 20px;
