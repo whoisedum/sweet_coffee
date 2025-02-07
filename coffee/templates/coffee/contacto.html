@@ -1,0 +1,178 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Sweet Coffee</title>
+    <link rel="stylesheet" href="{% static 'coffee/css/style.css' %}">
+</head>
+<body>
+    <header class="hero">
+        <nav class="navbar">
+            <div class="logo">
+                    <a href="#">
+                        <img src="{% static 'coffee/img/logo.png' %}" alt="Logo">
+                    </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="{% url 'home' %}" class="{% if request.resolver_match.url_name == 'home' %}active{% endif %}">Inicio</a></li>
+                <li><a href="{% url 'producto' %}" class="{% if request.resolver_match.url_name == 'producto' %}active{% endif %}">Productos</a></li>
+                <li><a href="{% url 'servicio' %}" class="{% if request.resolver_match.url_name == 'servicio' %}active{% endif %}">Sobre Nosotros</a></li>
+                <li><a href="{% url 'contacto' %}" class="{% if request.resolver_match.url_name == 'contacto' %}active{% endif %}">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="hero-content">
+            <h1>SWEET COFFEE</h1>
+            <p>El dulce aroma a café te va a encantar, ven y pruébalo YA</p>
+            <a href="#" class="btn-primary">INFORMACIÓN</a>
+        </div>
+    </header>
+
+    <div class="contact-container">
+        <!-- Sección Izquierda: Información de contacto -->
+        <div class="contact-info">
+            <p class="contact-intro">-- Keep Close</p>
+            <h2>Get In Touch</h2>
+            <p>
+                We're always here to listen. Reach out for reservations, inquiries, or just to say hi! 
+                Our team is dedicated to making your experience unforgettable. 
+            </p>
+    
+            <!-- Cuatro elementos en dos filas y dos columnas -->
+            <div class="contact-details">
+                <div class="detail-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <p>+593 960061012</p>
+                </div>
+                <div class="detail-item">
+                    <i class="fas fa-envelope"></i>
+                    <p>cafemateo@gmail.com</p>
+                </div>
+                <div class="detail-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>Calle Principal, Santo Domingo</p>
+                </div>
+                <div class="detail-item">
+                    <i class="fas fa-clock"></i>
+                    <p>Abierto de: 6am - 10pm</p>
+                </div>
+            </div>
+    
+            <!-- Línea divisoria y redes sociales -->
+            <div class="social-section">
+                <hr class="divider">
+                <p class="follow-us">Síguenos</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Sección Derecha: Formulario -->
+        <div class="contact-form">
+            <form>
+                <div class="form-group">
+                    <label for="name">Nombre</label>
+                    <input type="text" id="name" placeholder="Ingresa tu nombre">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Ingresa tu email">
+                </div>
+                <div class="form-group">
+                    <label for="subject">Tema</label>
+                    <input type="text" id="subject" placeholder="Tema">
+                </div>
+                <div class="form-group">
+                    <label for="message">Comentarios / Preguntas</label>
+                    <textarea id="message" rows="4" placeholder="Tu mensaje"></textarea>
+                </div>
+                <button type="submit" class="submit-button">Contact Us</button>
+            </form>
+        </div>
+    </div>
+
+    
+<div class="newsletter-section">
+    <div class="newsletter-container">
+        <div class="newsletter-image">
+            <img src="{% static 'coffee/img/newsletter.jpg' %}" alt="Newsletter">
+        </div>
+        <div class="newsletter-text">
+            <h3>Únete a nosotros y consigue un 25% de descuento!</h3>
+            <p>Suscribete a nuestro sitio y consigue un 25% de descuento.</p>
+            <form method="post">
+                <input type="email" name="email" placeholder="Ingresa tu email" required>
+                <button type="submit">Suscríbete</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+    
+<footer class="footer">
+    <div class="footer-content">
+        <!-- Columna 1: Logo y descripción -->
+        <div class="footer-section">
+            <img src="{% static 'coffee/img/logo.png' %}" alt="Logo" class="footer-logo">
+            <p>Disfruta de los mejores cafés preparados con amor y dedicación en nuestro coffee shop.</p>
+        </div>
+        <!-- Columna 2: Horarios -->
+        <div class="footer-section">
+            <h3>Horarios</h3>
+            <ul>
+                <li>Lunes: <span>6:00 - 20:00</span></li>
+                <li>Martes: <span>9:00 - 16:00</span></li>
+                <li>Miercoles: <span>9:00 - 16:00</span></li>
+                <li>Jueves: <span>8:00 - 17:00</span></li>
+                <li>Viernes: <span>7:00 - 18:00</span></li>
+                <li>Sábado: <span>9:00 - 20:00</span></li>
+                <li>Domingo: <span>Cerrado</span></li>
+            </ul>
+        </div>
+        <!-- Columna 3: Enlaces -->
+        <div class="footer-section">
+            <h3>Enlaces rápidos</h3>
+            <ul>
+                <li><a href="{% url 'home' %}">Inicio</a></li>
+                <li><a href="#">Nosotros</a></li>
+                <li><a href="{% url 'contacto' %}">Contáctanos</a></li>
+                <li><a href="#">Reservaciones</a></li>
+            </ul>
+        </div>
+        <!-- Columna 4: Contacto -->
+        <div class="footer-section">
+            <h3>Contacto</h3>
+            <ul>
+                <li><i class="fas fa-map-marker-alt"></i> Calle Principal, SantoD, Ecuador</li>
+                <li><i class="fas fa-phone-alt"></i> +593 960061012</li>
+                <li><i class="fas fa-envelope"></i> cafemateo@gmail.com</li>
+            </ul>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <span>© 2024 Todos los derechos reservados. Diseñado por Eduardo Olmedo.</span>
+    </div>
+</footer>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            const hero = document.querySelector('.hero');
+            const scrollPos = window.scrollY;
+            const maxScroll = 300; 
+            const offset = Math.min(scrollPos / maxScroll, 1);
+            hero.style.backgroundPosition = `center ${offset * 50}%`;
+        });
+    </script>
+</body>
+</html>
