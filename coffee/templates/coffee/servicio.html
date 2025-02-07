@@ -58,11 +58,18 @@
         </div>
         <div class="newsletter-text">
             <h3>Únete a nosotros y consigue un 25% de descuento!</h3>
-            <p>Suscribete a nuestro sitio y consigue un 25% de descuento.</p>
-            <form method="post">
-                <input type="email" name="email" placeholder="Ingresa tu email" required>
-                <button type="submit">Suscríbete</button>
+            <p>Suscríbete a nuestro sitio y consigue un 25% de descuento.</p>
+            <form method="post" action="">
+                {% csrf_token %}
+                <input type="email" name="email" placeholder="Introduce tu correo" required>
+                <button type="submit">Suscribirse</button>
             </form>
+        
+            {% if success %}
+                <p style="color: green;">¡Gracias por suscribirte!</p>
+            {% elif error %}
+                <p style="color: red;">{{ error }}</p>
+            {% endif %}
         </div>
     </div>
 </div>

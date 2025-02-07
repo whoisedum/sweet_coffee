@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsletter</title>
+</head>
+<body>
+    <h1>Suscríbete a nuestra newsletter</h1>
+    <form method="post" action="">
+        {% csrf_token %}
+        <input type="email" name="email" placeholder="Introduce tu correo" required>
+        <button type="submit">Suscribirse</button>
+    </form>
+
+    {% if success %}
+        <p style="color: green;">¡Gracias por suscribirte!</p>
+    {% elif error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+</body>
+</html>
+
